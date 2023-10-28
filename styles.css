@@ -1,0 +1,142 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light gray background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #ffcc00; /* Cartoonish yellow */
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section#gallery {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff; /* White background for each photo */
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+}
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.close {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background on hover */
+}
+
+footer {
+    background-color: #ffcc00; /* Cartoonish yellow */
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .photo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        width: 100%;
+    }
+}
